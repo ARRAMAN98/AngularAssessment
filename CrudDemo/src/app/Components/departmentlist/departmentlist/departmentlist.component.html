@@ -1,0 +1,20 @@
+<div class="container my-5">
+    <h1>Departments</h1>
+
+    <table class="table" *ngIf="departments && departments.length > 0">
+            <thead>
+                <tr>
+                 <th>Id</th>
+                 <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let department of departments">
+                 <td>{{ department.departmentId }}</td>
+                 <td>{{ department.name }}</td>
+                 <!-- <td><a [routerLink]="['/employees', 'edit', employee.id]">View</a></td> -->
+                </tr>
+            </tbody>
+    </table>
+    <p *ngIf="!departments || departments.length <= 0"> No Departments found.</p>
+</div>
